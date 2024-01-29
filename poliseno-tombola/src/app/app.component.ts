@@ -8,12 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   vettore= new Array();
   stampNumero(NumeroIn: HTMLInputElement): boolean {
-    
-    if (!(NumeroIn.value in this.vettore)) {
-      console.log(NumeroIn.value)
-      this.vettore.push(NumeroIn.value)
-      console.log(this.vettore)
-    } else if (NumeroIn.value in this.vettore) {console.log('Numero già inserito.')}
+    if (!(this.vettore.includes(NumeroIn.value))) {
+      console.log(NumeroIn.value);
+      this.vettore.push(NumeroIn.value);
+      console.log(this.vettore);
+    } else if (this.vettore.includes(NumeroIn.value)) {
+      console.log('Numero già inserito.');
+    }
     
     return false
   }
