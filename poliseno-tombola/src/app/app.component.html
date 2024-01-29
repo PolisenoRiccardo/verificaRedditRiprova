@@ -1,0 +1,10 @@
+<div class="container">
+<form class="jumbotron">
+<div class="form-group">
+<label for="numeroIN" class="display-4">Dimmi un numero: </label><br>
+<input name="numeroIn" #numeroIn class="form-control"><br></div>
+<button (click) = 'stampNumero(numeroIn)' class="btn btn-danger">Estrai</button>
+</form>
+
+<app-cartella [numero] = 'numeroIn' [vettore] = 'vettore'></app-cartella>
+</div>
