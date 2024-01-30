@@ -6,7 +6,12 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./cartella.component.css']
 })
 export class CartellaComponent implements OnInit {
-@Input() numero: HTMLInputElement;
+@Input() NumeroIn: HTMLInputElement;
+numero: Number;
+constructor() {
+  this.numero = Number(this.NumeroIn.value)
+}
+
 @Input() vettore: any[];
   ngOnInit(): void {
   
