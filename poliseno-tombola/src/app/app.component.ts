@@ -7,15 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   vettore= new Array();
+  numero: Number;
   stampNumero(NumeroIn: HTMLInputElement): boolean {
-    let numero = Number(NumeroIn.value);
-    if (!(this.vettore.includes(numero))) {
-      console.log(numero);
-      this.vettore.push(numero);
+    this.numero = Number(NumeroIn.value);
+    if (!(this.vettore.includes(this.numero))) {
+      console.log(this.numero);
+      this.vettore.push(this.numero);
       console.log(this.vettore);
-    } else if (this.vettore.includes(numero)) {
+    } else if (this.vettore.includes(this.numero)) {
       alert('Numero già inserito.');
     }
+
     
     return false
   }
